@@ -77,7 +77,7 @@ export default function CarouselPlugin() {
           flexDirection: 'row',
           gap: '10px',
         },
-        
+
         indicator: {
           width: '35px',
           height: '6px',
@@ -85,8 +85,6 @@ export default function CarouselPlugin() {
           border: 'none',
           opacity: 1,
           borderRadius: '10px',
-
-
         },
       }}
     >
@@ -95,7 +93,7 @@ export default function CarouselPlugin() {
           <img
             src={image}
             alt={`Slide ${index + 1}`}
-            className='w-full h-full object-cover sm:h-56 md:h-64 lg:h-[80vh]'
+            className='w-full h-full object-fill sm:h-56 md:h-64 lg:h-[80vh]'
           />
         </Carousel.Slide>
       ))}
