@@ -1,6 +1,6 @@
 import { Carousel } from '@mantine/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import '@mantine/carousel/styles.css'; // Ensure this import is present
 
 import c1 from '~/assets/images/carousel/c1.jpeg';
@@ -17,6 +17,7 @@ export default function CarouselPlugin() {
   const images = [c1, c2, c3, c4, c5, c6, c7, c8, c9];
 
   const autoplay = useRef(Autoplay({ delay: 2000 }));
+ 
 
   return (
     <Carousel
@@ -29,11 +30,11 @@ export default function CarouselPlugin() {
       slideSize='100%'
       slideGap='xs'
       controlsOffset='xl'
-      controlSize={50}
+      controlSize={60}
       nextControlIcon={
         <div
           style={{
-            backgroundColor: 'black',
+            backgroundColor: 'gray',
             color: 'white',
             padding: '10px',
             borderRadius: '50%',
@@ -45,10 +46,10 @@ export default function CarouselPlugin() {
       previousControlIcon={
         <div
           style={{
-            backgroundColor: 'black',
+            backgroundColor: 'gray',
             color: 'white',
             padding: '10px',
-            borderRadius: '50%',
+            borderRadius: '50%',  
           }}
         >
           &lt;
@@ -62,13 +63,7 @@ export default function CarouselPlugin() {
       }}
       styles={{
         control: {
-          backgroundColor: 'rgba(0,0,0,0.5)',
-          color: 'white',
-          border: '2px solid white',
-          opacity: 1,
-          visibility: 'visible',
-          position: 'absolute',
-          zIndex: 10,
+          backgroundColor: 'gray'
         },
         indicators: {
           bottom: '10px',
@@ -77,7 +72,6 @@ export default function CarouselPlugin() {
           flexDirection: 'row',
           gap: '10px',
         },
-        
         indicator: {
           width: '35px',
           height: '6px',
@@ -85,10 +79,9 @@ export default function CarouselPlugin() {
           border: 'none',
           opacity: 1,
           borderRadius: '10px',
-
-
         },
       }}
+      
     >
       {images.map((image, index) => (
         <Carousel.Slide key={index}>
