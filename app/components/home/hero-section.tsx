@@ -73,13 +73,20 @@ export default function CarouselPlugin() {
         indicators: {
           bottom: '10px',
           zIndex: 10,
+          display: 'flex',
+          flexDirection: 'row',
+          gap: '10px',
         },
+        
         indicator: {
-          width: '12px',
-          height: '12px',
-          backgroundColor: 'white',
-          border: '2px solid black',
+          width: '35px',
+          height: '6px',
+          backgroundColor: '#c3cacd',
+          border: 'none',
           opacity: 1,
+          borderRadius: '10px',
+
+
         },
       }}
     >
