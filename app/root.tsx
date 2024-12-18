@@ -10,6 +10,7 @@ import type { LinksFunction } from '@remix-run/node';
 import { MantineProvider } from '@mantine/core'; // Import MantineProvider
 import './tailwind.css';
 import '@mantine/carousel/styles.css';
+import '@mantine/core/styles.css';
 
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

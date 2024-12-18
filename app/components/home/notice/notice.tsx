@@ -1,4 +1,3 @@
-import React from 'react';
 import AdmissionNotice from './admission-notice';
 import GeneralNotice from './general-notice';
 
