@@ -1,8 +1,8 @@
 import type { MetaFunction } from '@remix-run/node';
 import HeroSection from '~/components/home/hero-section';
-import Message from '~/components/message';
 import Navbar from '~/components/navbar/navbar';
 import Notice from '~/components/home/notice/notice';
+import Message from '~/components/home/message/message';
 
 export const meta: MetaFunction = () => {
   return [

@@ -17,7 +17,6 @@ export default function CarouselPlugin() {
   const images = [c1, c2, c3, c4, c5, c6, c7, c8, c9];
 
   const autoplay = useRef(Autoplay({ delay: 2000 }));
- 
 
   return (
     <Carousel
@@ -49,7 +48,7 @@ export default function CarouselPlugin() {
             backgroundColor: 'gray',
             color: 'white',
             padding: '10px',
-            borderRadius: '50%',  
+            borderRadius: '50%',
           }}
         >
           &lt;
@@ -63,7 +62,7 @@ export default function CarouselPlugin() {
       }}
       styles={{
         control: {
-          backgroundColor: 'gray'
+          backgroundColor: 'gray',
         },
         indicators: {
           bottom: '10px',
@@ -81,7 +80,6 @@ export default function CarouselPlugin() {
           borderRadius: '10px',
         },
       }}
-      
     >
       {images.map((image, index) => (
         <Carousel.Slide key={index}>
