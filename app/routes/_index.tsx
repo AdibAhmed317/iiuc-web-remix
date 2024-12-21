@@ -3,6 +3,7 @@ import HeroSection from '~/components/home/hero-section';
 import Navbar from '~/components/navbar/navbar';
 import Notice from '~/components/home/notice/notice';
 import Message from '~/components/home/message/message';
+import NumberSection from '~/components/home/number-section';
 
 export const meta: MetaFunction = () => {
   return [
@@ -29,6 +30,7 @@ export default function Index() {
       <HeroSection />
       <Notice />
       <Message />
+      <NumberSection />
     </>
   );
 }

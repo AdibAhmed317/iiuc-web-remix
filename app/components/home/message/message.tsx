@@ -1,6 +1,7 @@
 import { VipCard } from './vip-card';
 import { MessageCard } from './message-card';
 import chairman from '~/assets/images/vip-message/shamsul.jpg';
+import treasurer from '~/assets/images/vip-message/treasurer.jpg';
 import {
   vc_message,
   provc_message,
@@ -36,9 +37,9 @@ export default function Message() {
           message={provc_message}
         />
         <VipCard
-          name='Demo Treasurer Name'
-          designation='Treasurer'
-          imgSrc={chairman}
+          name='Prof. Dr. Muhammad Mahbubur Rahman'
+          designation='Treasurer (in-charge)'
+          imgSrc={treasurer}
           isChairman={false}
           message={treasurer_message}
         />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Modal, Button } from '@mantine/core';
+import { Modal } from '@mantine/core';
 import { chairman_message } from '~/assets/data/messages';
 
 export const MessageCard = () => {
