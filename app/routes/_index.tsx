@@ -31,8 +31,8 @@ export default function Index() {
       <HeroSection />
       <Notice />
       <Message />
-      <Footer/>
       <NumberSection />
+      <Footer />
     </>
   );
 }
