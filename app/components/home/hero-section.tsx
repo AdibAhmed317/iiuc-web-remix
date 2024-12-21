@@ -72,10 +72,6 @@ export default function CarouselPlugin() {
           flexDirection: 'row',
           gap: '10px',
         },
-<<<<<<< HEAD
-=======
-
->>>>>>> d94740c6557d8c45aa377f8e8df926db25a568d0
         indicator: {
           width: '35px',
           height: '6px',
