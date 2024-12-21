@@ -1,6 +1,6 @@
 import { SVGProps } from "react"
 import { JSX } from "react/jsx-runtime"
-import IIUCLogo from '../../assets/images/iiuc-logo.png'
+import IIUCLogo from '../../assets/images/iiuc-logo-transparent.png'
 
 const navigation = {
      admission: [
@@ -180,7 +180,7 @@ const navigation = {
     return (
         <footer className="bg-primaryBlue py-10">
         <div className="flex flex-col items-center">
-          <img src={IIUCLogo} alt="IIUC Logo"className="w-16 h-16 md:w-24 md:h-24" />
+          <img src={IIUCLogo} alt="IIUC Logo" className="bg-white rounded" style={{ width: '150px', height: '150px', objectFit: 'contain' }}  />
           <div className="mt-4">
             <SocialLinks social={social} />
           </div>
