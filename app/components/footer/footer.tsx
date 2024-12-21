@@ -155,13 +155,13 @@ const navigation = {
     links: { name: string; href: string }[];
   }) => (
     <div>
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <h3 className="font-semibold text-white" style={{ fontSize: '20px' }}>{title}</h3>
       <ul className="mt-2 space-y-1">
         {links.map((link) => (
           <li key={link.name}>
             <a
               href={link.href}
-              className="text-white hover:text-blue-600 hover:underline"
+              className="text-sm text-white/50 transition-colors duration-200 ease-in-out hover:text-white hover:underline"
             >
               {link.name}
             </a>
@@ -187,7 +187,7 @@ const navigation = {
         </div>
       
         <div className="container mx-auto px-2 md:px-4 grid gap-8 md:grid-cols-5 mt-8">
-          <NavigationSection title="Admission" links={admission} />
+          <NavigationSection title="Admission" links={admission}/>
           <NavigationSection title="Quick Links" links={quickLinks} />
           <NavigationSection title="Resources" links={resources} />
           <NavigationSection title="Downloads" links={downloads} />

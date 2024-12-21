@@ -19,7 +19,7 @@ export const MessageCard = () => {
       <div className='mt-4 flex justify-between items-center'>
         <button
           onClick={() => setIsModalOpen(true)}
-          className='text-blue-600 hover:text-blue-800'
+          className='text-black-600 hover:text-white transition-all duration-300 bg-gray-300 hover:bg-primaryBlue py-2 px-4 rounded-xl'
         >
           Read More
         </button>
