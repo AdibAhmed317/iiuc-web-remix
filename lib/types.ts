@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 import { IconType } from 'react-icons';
 
 export interface SubItem {
@@ -15,5 +14,7 @@ export interface MenuItem {
 export interface VipCardProps {
   name: string;
   designation: string;
-  imgSrc: string | StaticImageData;
+  imgSrc: string;
+  isChairman: boolean;
+  message: string;
 }

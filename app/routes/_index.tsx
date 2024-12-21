@@ -4,6 +4,7 @@ import Navbar from '~/components/navbar/navbar';
 import Notice from '~/components/home/notice/notice';
 import Message from '~/components/home/message/message';
 import Footer from '~/components/footer/footer';
+import NumberSection from '~/components/home/number-section';
 
 export const meta: MetaFunction = () => {
   return [
@@ -31,6 +32,7 @@ export default function Index() {
       <Notice />
       <Message />
       <Footer/>
+      <NumberSection />
     </>
   );
 }
