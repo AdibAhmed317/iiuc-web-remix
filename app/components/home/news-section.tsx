@@ -1,5 +1,11 @@
 import { Link } from '@remix-run/react';
 import { motion } from 'framer-motion';
+import n1 from '~/assets/images/news/n1.jpeg';
+import n2 from '~/assets/images/news/n2.jpeg';
+import n3 from '~/assets/images/news/n3.jpeg';
+import n4 from '~/assets/images/news/n4.jpeg';
+import n5 from '~/assets/images/news/n5.jpeg';
+import n6 from '~/assets/images/news/n6.jpeg';
 
 export default function NewsSection() {
   // Animation variants for the main section
@@ -11,46 +17,40 @@ export default function NewsSection() {
   // Array of articles
   const articles = [
     {
-      imageUrl:
-        'https://api.time.com/wp-content/uploads/2020/07/president-trump-coronavirus-election.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1',
-      title: 'Trump Steps Back Into Coronavirus Spotlight',
+      imageUrl: n1,
+      title: 'প্রাক্তন ছাত্র অ্যাডভোকেট সাইফুলকে খুনের ঘটনায় আইআইইউসির নিন্দা',
       description:
-        'In this article, we explore how President Trump’s approach to the coronavirus pandemic is impacting his re-election campaign.',
+        'This article covers the international seminar held at IIUC, focusing on sustainable development practices in education and society.',
     },
     {
-      imageUrl:
-        'https://api.time.com/wp-content/uploads/2020/06/GettyImages-1222922545.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1',
-      title: "How Trump's Mistakes Became Biden's Big Breaks",
+      imageUrl: n2,
+      title:
+        'আইআইইউসি&apos;র প্রাক্তন ছাত্র এডভোকেট সাইফুলের নৃশংস মৃত্যুতে ভিসি ট্রাস্ট সদস্যদের শোক প্রকাশ',
       description: '',
     },
     {
-      imageUrl:
-        'https://api.time.com/wp-content/uploads/2020/07/American-Flag.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1',
-      title: "Survey: Many Americans 'Dissatisfied' With U.S.",
+      imageUrl: n3,
+      title: 'গুণগত শিক্ষার সাথে প্রকৌশলীদের নৈতিকতার জ্ঞানার্জন করতে হবে',
       description: '',
     },
     {
-      imageUrl:
-        'https://api.time.com/wp-content/uploads/2020/06/GettyImages-1222922545.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1',
-      title: "How Trump's Mistakes Became Biden's Big Breaks",
+      imageUrl: n4,
+      title: 'দৈনিক পূর্বকোণ আইআইইউসি এর সিএসই স্পোর্টস উইক সম্পন্ন',
       description: '',
     },
     {
-      imageUrl:
-        'https://api.time.com/wp-content/uploads/2020/07/American-Flag.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1',
-      title: "Survey: Many Americans 'Dissatisfied' With U.S.",
+      imageUrl: n4,
+      title: 'দৈনিক পূর্বকোণ আইআইইউসি এর সিএসই স্পোর্টস উইক সম্পন্ন',
       description: '',
     },
     {
-      imageUrl:
-        'https://api.time.com/wp-content/uploads/2020/07/president-trump-coronavirus-election.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1',
-      title: 'Trump Steps Back Into Coronavirus Spotlight',
+      imageUrl: n5,
+      title: 'দৈনিক আজাদী - আইআইইউসি এর সিএসই স্পোর্টস উইক সম্পন্ন',
       description: '',
     },
     {
-      imageUrl:
-        'https://api.time.com/wp-content/uploads/2020/07/president-trump-coronavirus-election.jpg?quality=85&amp;w=364&amp;h=204&amp;crop=1',
-      title: 'Trump Steps Back Into Coronavirus Spotlight',
+      imageUrl: n6,
+      title: 'আইআইইউসি বিজনেস ক্লাবের দক্ষতা উন্নয়ন কর্মশালা।',
       description: '',
     },
   ];

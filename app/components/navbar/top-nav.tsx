@@ -39,10 +39,11 @@ export default function TopNav() {
         viewport={{ once: true }} // Trigger animation only once when entering the viewport
       >
         <Link
-          to=''
+          to='https://www.iiuc.ac.bd/home/quick-contact'
+          target='_blank'
           className='bg-yellow-600 p-2 text-black hover:scale-110 transition-all h-8 sm:h-10 w-28 flex justify-center items-center text-xs sm:text-sm rounded-md font-robotoBlack'
         >
-          Transport
+          Quick Contact
         </Link>
       </motion.div>
     </nav>
