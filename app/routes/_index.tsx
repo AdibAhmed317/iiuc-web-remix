@@ -8,6 +8,8 @@ import NumberSection from '~/components/home/number-section';
 import LibrarySection from '~/components/home/library-page/library-section';
 import WelcomeIiuc from '~/components/home/welcome-section/welcome-iiuc';
 import NewsSection from '~/components/home/news-section';
+import QuickOptions from '~/components/home/quick-options';
+import Divider from '~/components/divider';
 
 export const meta: MetaFunction = () => {
   return [
@@ -29,14 +31,22 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden bg-gray-100'>
       <Navbar />
       <HeroSection />
+      <Divider />
       <Notice />
+      <Divider />
       <WelcomeIiuc />
+      <Divider />
       <Message />
+      <Divider />
       <NumberSection />
+      <Divider />
       <NewsSection />
+      <Divider />
+      <QuickOptions />
+      <Divider />
       <LibrarySection />
       <Footer />
     </div>
