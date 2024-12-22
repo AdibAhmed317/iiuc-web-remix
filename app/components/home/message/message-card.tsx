@@ -19,7 +19,7 @@ export const MessageCard = () => {
       <div className='mt-4 flex justify-between items-center'>
         <button
           onClick={() => setIsModalOpen(true)}
-          className='text-black-600 hover:text-white transition-all duration-300 bg-gray-300 hover:bg-primaryBlue py-2 px-4 rounded-xl'
+          className='text-blue-600 hover:text-blue-800'
         >
           Read More
         </button>
@@ -27,11 +27,16 @@ export const MessageCard = () => {
 
       <Modal
         opened={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title='Message from the Chairman'
+        onClose={() => setIsModalOpen(false)} 
+        title={ 
+          <span style={{ fontSize: '24px', color: '#1d4ed8', fontWeight: 'bold' }}>
+            Message from the Chairman
+          </span>
+        } 
         centered
-        size='lg'
+        size='xl'
       >
+        <hr className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6" /> 
         <p className='text-sm md:text-base text-gray-700'>{chairman_message}</p>
       </Modal>
     </div>

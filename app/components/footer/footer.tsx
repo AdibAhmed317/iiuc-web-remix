@@ -186,12 +186,32 @@ const navigation = {
           </div>
         </div>
       
-        <div className="container mx-auto px-2 md:px-4 grid gap-8 md:grid-cols-5 mt-8">
-          <NavigationSection title="Admission" links={admission}/>
+        <div className="container mx-auto px-2 md:px-4 grid text-center md:text-left gap-8 md:grid-cols-5 mt-8">
+          {/* <NavigationSection title="Admission" links={admission}/>
           <NavigationSection title="Quick Links" links={quickLinks} />
           <NavigationSection title="Resources" links={resources} />
           <NavigationSection title="Downloads" links={downloads} />
-          <NavigationSection title="About IIUC" links={aboutIIUC} />
+          <NavigationSection title="About IIUC" links={aboutIIUC} /> */}
+
+          <div className="md:text-left">
+          <NavigationSection title="Admission" links={admission}/>
+          </div>
+         
+          <div className="md:text-left">
+            <NavigationSection title="Quick Links" links={quickLinks} />
+          </div>
+         
+          <div className="md:text-center">
+            <NavigationSection title="Resources" links={resources} />
+          </div>
+
+          <div className="md:text-right">
+            <NavigationSection title="Downloads" links={downloads} />
+          </div>
+         
+          <div className="md:text-right">
+              <NavigationSection title="About IIUC" links={aboutIIUC} />
+          </div>
         </div>
       
         <div className="mt-8 text-center text-sm text-white">

@@ -34,7 +34,7 @@ export const VipCard: React.FC<VipCardProps> = ({
         onClose={() => setIsModalOpen(false)}
         title='Message from the Chairman'
         centered
-        size='lg'
+        size='xl'
       >
         <p className='text-sm md:text-base text-gray-700'>{message}</p>
       </Modal>

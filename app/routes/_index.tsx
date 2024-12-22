@@ -6,6 +6,7 @@ import Message from '~/components/home/message/message';
 import Footer from '~/components/footer/footer';
 import NumberSection from '~/components/home/number-section';
 import LibrarySection from '~/components/home/library-page/library-section';
+import WelcomeIiuc from '~/components/home/welcome-section/welcome-iiuc';
 
 export const meta: MetaFunction = () => {
   return [
@@ -34,6 +35,7 @@ export default function Index() {
       <Message />
       <NumberSection />
       <LibrarySection/>
+      <WelcomeIiuc/>
       <Footer />
     </>
   );

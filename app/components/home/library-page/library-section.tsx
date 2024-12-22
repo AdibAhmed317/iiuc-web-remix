@@ -13,23 +13,23 @@ export default function LibrarySection(){
   return (
     <div className="bg-gray-100">  
       <section className="py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 ">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h2 className="text-xl text-gray-600 mb-4">IIUC Central Library</h2>
-            
+
             <hr className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6" />
             
             <div className="space-y-4">
-                <div className="flex flex-col md:flex-row gap-6">
+                <div className="flex flex-col lg:flex-row gap-6">
                     
                     <img 
                         src={LibraryImg}
                         alt="IIUC Central Library"
-                        className="w-full md:w-2/5 rounded-lg object-cover h-fit"
+                        className="w-full lg:w-2/5 rounded-lg object-cover h-fit"
                         />
                     <div className="flex-1 space-y-4">
                         <p className="text-justify">
-                            {truncateMessage(library_description, 800)}
+                            {truncateMessage(library_description, 1500)}
                         </p>
                         <button
                         onClick={() => setIsModalOpen(true)}
@@ -46,11 +46,16 @@ export default function LibrarySection(){
          <Modal
                 opened={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
-                title='IIUC Central Library'
+                title={ 
+                    <span style={{ fontSize: '24px', color: '#1d4ed8', fontWeight: 'bold' }}>
+                      IIUC Central Library
+                    </span>
+                  }
                 centered
-                size='lg'
+                size='xl'
               >
-                <p className='text-sm md:text-base text-gray-700'>{library_description}</p>
+                <hr className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6" /> 
+                <p className='text-sm md:text-base text-gray-700 p-4'>{library_description}</p>
         </Modal>
       </section>
     </div>
