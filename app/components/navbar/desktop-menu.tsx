@@ -1,6 +1,7 @@
 // DesktopMenu.tsx
 import { useRef } from 'react';
 import { MenuItem } from 'lib/types';
+import { motion } from 'framer-motion';
 
 interface DesktopMenuProps {
   menuItems: MenuItem[];
@@ -83,7 +84,11 @@ const DesktopMenu = ({ menuItems }: DesktopMenuProps) => {
     <div className='hidden lg:flex lg:items-center lg:space-x-1 flex-wrap justify-center'>
       {menuItems.map((item, index) => (
         <div key={index} ref={setRef(index)} className='relative group'>
-          <button
+          <motion.button
+            initial={{ y: -10, opacity: 0 }} // Start from above the screen
+            whileInView={{ y: 0, opacity: 1 }} // Animate to normal position when in view
+            transition={{ duration: 1, delay: index * 0.1 }} // Stagger the animation based on index
+            viewport={{ once: true }} // Trigger animation only once when entering the viewport
             className='px-3 py-2 rounded-md text-gray-700 hover:bg-primaryGray hover:text-primaryBlue 
                        transition-all duration-200 flex justify-center items-center space-x-2 group'
           >
@@ -93,7 +98,7 @@ const DesktopMenu = ({ menuItems }: DesktopMenuProps) => {
             <span className='text-sm font-robotoBlack text-primaryBlue'>
               {item.label}
             </span>
-          </button>
+          </motion.button>
 
           {/* Desktop Hover Dropdown */}
           <div

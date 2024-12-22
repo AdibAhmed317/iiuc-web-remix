@@ -6,6 +6,7 @@ import Message from '~/components/home/message/message';
 import Footer from '~/components/footer/footer';
 import NumberSection from '~/components/home/number-section';
 import LibrarySection from '~/components/home/library-page/library-section';
+import NewsSection from '~/components/home/news-section';
 
 export const meta: MetaFunction = () => {
   return [
@@ -33,6 +34,7 @@ export default function Index() {
       <Notice />
       <Message />
       <NumberSection />
+      <NewsSection />
       <LibrarySection />
       <Footer />
     </div>

@@ -63,8 +63,8 @@ export default function NumberSection() {
   return (
     <motion.div
       ref={sectionRef}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isInView ? 1 : 0 }} // Fade in when in view
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: isInView ? 1 : 0 }} // Fade in when in view
       transition={{ duration: 1 }}
       className='bg-black/85 mt-10 flex justify-center items-center'
       style={{
