@@ -27,14 +27,14 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <>
+    <div className='overflow-hidden'>
       <Navbar />
       <HeroSection />
       <Notice />
       <Message />
       <NumberSection />
-      <LibrarySection/>
+      <LibrarySection />
       <Footer />
-    </>
+    </div>
   );
 }
