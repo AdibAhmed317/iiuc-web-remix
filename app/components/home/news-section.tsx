@@ -85,6 +85,7 @@ export default function NewsSection() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }} // This ensures the animation triggers only once when entering the viewport
             >
               <a href='#'>
                 <div
@@ -118,6 +119,7 @@ export default function NewsSection() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: (index + 1) * 0.2 }}
+              viewport={{ once: true }} // This ensures the animation triggers only once when entering the viewport
             >
               <a href='#'>
                 <div

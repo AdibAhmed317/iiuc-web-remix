@@ -24,13 +24,13 @@ export default function WelcomeIiuc() {
                   className='flex-1'
                   width='560'
                   height='auto'
-                  src='https://www.youtube.com/embed/QHDfe7rdtJg?si=IAz2y79avP1rDXTw&autoplay=1&mute=1'
+                  src='https://www.youtube.com/embed/QHDfe7rdtJg?si=IAz2y79avP1rDXTw&autoplay=1&mute=1&rel=0'
                   title='YouTube video player'
                   frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                   referrerPolicy='strict-origin-when-cross-origin'
                   allowFullScreen
-                ></iframe>
+                />
 
                 <div className='flex-1 space-y-4'>
                   <p className='text-justify'>
