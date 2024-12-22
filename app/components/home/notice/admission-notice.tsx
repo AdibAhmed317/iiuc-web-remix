@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaClock, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 export default function AdmissionNotice() {
   return (
     <div className='min-h-[50vh] md:min-h-[70vh] w-full flex flex-col p-4'>
-      <div className='shadow-xl rounded-xl min-h-[50vh] md:min-h-[70vh] py-5'>
+      <div className='shadow-xl rounded-xl min-h-[50vh] md:min-h-[70vh] py-5 bg-white'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='font-robotoRegular text-2xl md:text-4xl text-primaryBlue text-center'>
             Admission News
