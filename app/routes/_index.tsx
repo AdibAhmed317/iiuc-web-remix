@@ -33,11 +33,11 @@ export default function Index() {
       <Navbar />
       <HeroSection />
       <Notice />
+      <WelcomeIiuc />
       <Message />
       <NumberSection />
       <NewsSection />
       <LibrarySection />
-      <WelcomeIiuc/>
       <Footer />
     </div>
   );
