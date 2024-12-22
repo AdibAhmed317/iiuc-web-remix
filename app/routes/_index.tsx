@@ -7,6 +7,7 @@ import Footer from '~/components/footer/footer';
 import NumberSection from '~/components/home/number-section';
 import LibrarySection from '~/components/home/library-page/library-section';
 import WelcomeIiuc from '~/components/home/welcome-section/welcome-iiuc';
+import NewsSection from '~/components/home/news-section';
 
 export const meta: MetaFunction = () => {
   return [
@@ -28,15 +29,16 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <>
+    <div className='overflow-hidden'>
       <Navbar />
       <HeroSection />
       <Notice />
       <Message />
       <NumberSection />
-      <LibrarySection/>
+      <NewsSection />
+      <LibrarySection />
       <WelcomeIiuc/>
       <Footer />
-    </>
+    </div>
   );
 }
