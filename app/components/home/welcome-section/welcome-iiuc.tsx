@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LibraryImg from '../../../assets/images/library.jpg'
 import { welcome_description } from '~/assets/data/messages';   
 import { Modal } from '@mantine/core';
@@ -9,6 +9,16 @@ export default function WelcomeIiuc(){
 
     const truncateMessage = (text: string, limit: number) =>
         text.length > limit ? `${text.slice(0, limit)}...` : text;
+
+    useEffect(() => {
+        // YouTube Video Auto-play when component mounts
+        const iframe = document.querySelector('iframe');
+        if (iframe && iframe.contentWindow) {
+            iframe.contentWindow.postMessage(
+                '{"event":"command","func":"playVideo","args":""}', '*'
+            );
+        }
+    }, []);
 
   return (
     <div className="bg-gray-100">  
@@ -27,8 +37,7 @@ export default function WelcomeIiuc(){
                         width="560" 
                         height="auto" 
                         src="https://www.youtube.com/embed/QHDfe7rdtJg?si=IAz2y79avP1rDXTw&autoplay=1&mute=1" 
-                        title="YouTube video player" 
-                        frameBorder="0" 
+                        title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerPolicy="strict-origin-when-cross-origin" 
                         allowFullScreen
