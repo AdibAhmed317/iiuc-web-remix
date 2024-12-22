@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
-import LibraryImg from '../../../assets/images/library.jpg'
-import { welcome_description } from '~/assets/data/messages';   
-=======
-import { useState } from 'react';
 import LibraryImg from '../../../assets/images/library.jpg';
 import { welcome_description } from '~/assets/data/messages';
->>>>>>> de532e0071bec1cc0bb77d94957cb022fb2755b4
 import { Modal } from '@mantine/core';
 
 export default function WelcomeIiuc() {
@@ -32,26 +26,7 @@ export default function WelcomeIiuc() {
           <div className='bg-white rounded-lg shadow-md p-6'>
             <h2 className='text-xl text-gray-600 mb-4'>Welcome To IIUC</h2>
 
-<<<<<<< HEAD
-            <hr className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6" />
-            
-            <div className="space-y-4">
-                <div className="flex flex-col md:flex-row gap-6">
-                    
-                    <iframe 
-                        className='flex-1'
-                        width="560" 
-                        height="auto" 
-                        src="https://www.youtube.com/embed/QHDfe7rdtJg?si=IAz2y79avP1rDXTw&autoplay=1&mute=1" 
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerPolicy="strict-origin-when-cross-origin" 
-                        allowFullScreen
-                        >
-                    </iframe>
-=======
             <hr className='h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6' />
->>>>>>> de532e0071bec1cc0bb77d94957cb022fb2755b4
 
             <div className='space-y-4'>
               <div className='flex flex-col md:flex-row gap-6'>
