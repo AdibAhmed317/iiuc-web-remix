@@ -22,12 +22,7 @@ export default function LibrarySection(){
             <div className="space-y-4">
                 <div className="flex flex-col lg:flex-row gap-6">
                     
-                    <img 
-                        src={LibraryImg}
-                        alt="IIUC Central Library"
-                        className="w-full lg:w-2/5 rounded-lg object-cover h-fit"
-                        />
-                    <div className="flex-1 space-y-4">
+                   <div className="flex-1 space-y-4">
                         <p className="text-justify">
                             {truncateMessage(library_description, 1500)}
                         </p>
@@ -38,6 +33,11 @@ export default function LibrarySection(){
                         Read More
                         </button>
                     </div>
+                    <img 
+                        src={LibraryImg}
+                        alt="IIUC Central Library"
+                        className="w-full lg:w-2/5 rounded-lg object-cover h-fit"
+                    />
                     
                 </div>
             </div>
