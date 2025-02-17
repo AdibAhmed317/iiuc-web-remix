@@ -1,7 +1,9 @@
 import { VipCard } from './vip-card';
 import { MessageCard } from './message-card';
 import chairman from '~/assets/images/vip-message/shamsul.jpg';
+import vc from '~/assets/images/vip-message/vc.jpg';
 import treasurer from '~/assets/images/vip-message/treasurer.jpg';
+import avatar from '~/assets/images/vip-message/avatar.png';
 import {
   vc_message,
   provc_message,
@@ -12,6 +14,12 @@ import { motion } from 'framer-motion';
 export default function Message() {
   return (
     <div className='h-full w-full flex flex-col justify-center items-center space-y-10 p-4'>
+      <div className='flex flex-col justify-center items-center'>
+        <h1 className='font-robotoLight text-4xl text-gray-600 text-center'>
+          Messages
+        </h1>
+        <span className='bg-primaryBlue w-10 h-[3px] my-5'></span>
+      </div>
       <div className='flex flex-col md:flex-row md:space-x-5 space-y-4 md:space-y-0 items-center'>
         <motion.div
           initial={{ x: -200, opacity: 0 }} // Start from the left off-screen
@@ -45,9 +53,9 @@ export default function Message() {
           viewport={{ once: true }} // Trigger animation only once when entering the viewport
         >
           <VipCard
-            name='Demo VC Name'
+            name='Prof. Dr. Mohammad Ali Azadi'
             designation='Vice Chancellor'
-            imgSrc={chairman}
+            imgSrc={vc}
             isChairman={false}
             message={vc_message}
           />
@@ -62,7 +70,7 @@ export default function Message() {
           <VipCard
             name='Demo Pro VC Name'
             designation='Pro Vice Chancellor'
-            imgSrc={chairman}
+            imgSrc={avatar}
             isChairman={false}
             message={provc_message}
           />

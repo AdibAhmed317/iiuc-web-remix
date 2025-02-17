@@ -23,8 +23,8 @@ const notices = [
 
 export default function GeneralNotice() {
   return (
-    <div className='min-h-[50vh] md:min-h-[70vh] w-full flex flex-col p-4'>
-      <div className='shadow-xl rounded-xl min-h-[50vh] md:min-h-[70vh] py-5 bg-white'>
+    <div className='w-full flex flex-col p-4'>
+      <div className='shadow-xl rounded-xl min-h-[50vh] md:min-h-[70vh] py-5 bg-[#C8D9E6]'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='font-robotoRegular text-4xl text-primaryBlue text-center'>
             Notice
@@ -38,8 +38,12 @@ export default function GeneralNotice() {
           className='px-10'
         >
           <Tabs.List>
-            <Tabs.Tab value='general-notice'>General Notice</Tabs.Tab>
-            <Tabs.Tab value='tender-notice'>Tender Notice</Tabs.Tab>
+            <Tabs.Tab value='general-notice' className='hover:bg-bg-[#F5EFEB]'>
+              General Notice
+            </Tabs.Tab>
+            <Tabs.Tab value='tender-notice' className='hover:bg-bg-[#F5EFEB]'>
+              Tender Notice
+            </Tabs.Tab>
           </Tabs.List>
 
           <Tabs.Panel value='general-notice'>
@@ -47,7 +51,7 @@ export default function GeneralNotice() {
               {notices.map((notice, index) => (
                 <div
                   key={index}
-                  className='bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300'
+                  className='bg-[#F5EFEB] p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300'
                 >
                   <h3 className='font-semibold text-xl text-primaryBlue'>
                     {notice.title}
@@ -63,7 +67,7 @@ export default function GeneralNotice() {
               {notices.map((notice, index) => (
                 <div
                   key={index}
-                  className='bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300'
+                  className='bg-[#F5EFEB] p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300'
                 >
                   <h3 className='font-semibold text-xl text-primaryBlue'>
                     {notice.title}

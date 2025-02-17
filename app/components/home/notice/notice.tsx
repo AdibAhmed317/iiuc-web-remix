@@ -4,7 +4,7 @@ import GeneralNotice from './general-notice';
 
 export default function Notice() {
   return (
-    <div className='flex flex-col lg:flex-row justify-center items-center my-0 md:my-20'>
+    <div className='flex flex-col lg:flex-row justify-center items-center my-0 md:my-20 px-10 md:px-40'>
       <motion.div
         className='flex-1'
         initial={{ x: -300, opacity: 0 }} // Start from the left off-screen

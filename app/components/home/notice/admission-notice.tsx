@@ -3,8 +3,8 @@ import { FaCalendarAlt, FaClock, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
 export default function AdmissionNotice() {
   return (
-    <div className='min-h-[50vh] md:min-h-[70vh] w-full flex flex-col p-4'>
-      <div className='shadow-xl rounded-xl min-h-[50vh] md:min-h-[70vh] py-5 bg-white'>
+    <div className='w-full flex flex-col p-4'>
+      <div className='shadow-xl rounded-xl min-h-[50vh] md:min-h-[70vh] py-5 bg-[#C8D9E6]'>
         <div className='flex flex-col justify-center items-center'>
           <h1 className='font-robotoRegular text-2xl md:text-4xl text-primaryBlue text-center'>
             Admission News
@@ -18,10 +18,24 @@ export default function AdmissionNotice() {
           className='px-10'
         >
           <Tabs.List>
-            <Tabs.Tab value='admission-menu'> Admission Menu</Tabs.Tab>
-            <Tabs.Tab value='admission-guideline'>Admission Guideline</Tabs.Tab>
-            <Tabs.Tab value='admission-contact'>Admission Contact</Tabs.Tab>
-            <Tabs.Tab value='admission-faq'>Admission FAQ</Tabs.Tab>
+            <Tabs.Tab value='admission-menu' className='hover:bg-bg-[#F5EFEB]'>
+              Admission Menu
+            </Tabs.Tab>
+            <Tabs.Tab
+              value='admission-guideline'
+              className='hover:bg-bg-[#F5EFEB]'
+            >
+              Admission Guideline
+            </Tabs.Tab>
+            <Tabs.Tab
+              value='admission-contact'
+              className='hover:bg-bg-[#F5EFEB]'
+            >
+              Admission Contact
+            </Tabs.Tab>
+            <Tabs.Tab value='admission-faq' className='hover:bg-bg-[#F5EFEB]'>
+              Admission FAQ
+            </Tabs.Tab>
           </Tabs.List>
 
           <Tabs.Panel value='admission-menu'>
@@ -29,26 +43,26 @@ export default function AdmissionNotice() {
               Admission Menu
             </h2>
             <div className='flex flex-wrap gap-4'>
-              <button className='flex justify-center items-center bg-primaryGray border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
+              <button className='flex justify-center items-center bg-[#F5EFEB] border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
                 Apply Online
               </button>
-              <button className='flex justify-center items-center bg-primaryGray border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
+              <button className='flex justify-center items-center bg-[#F5EFEB] border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
                 Admission Advertisement
               </button>
-              <button className='flex justify-center items-center bg-primaryGray border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
+              <button className='flex justify-center items-center bg-[#F5EFEB] border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
                 Instruction for Admission
               </button>
-              <button className='flex justify-center items-center bg-primaryGray border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
+              <button className='flex justify-center items-center bg-[#F5EFEB] border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
                 Print Admit Card
               </button>
-              <button className='flex justify-center items-center bg-primaryGray border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
+              <button className='flex justify-center items-center bg-[#F5EFEB] border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
                 Print Admission Form
               </button>
-              <button className='flex justify-center items-center bg-primaryGray border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
+              <button className='flex justify-center items-center bg-[#F5EFEB] border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
                 Print Offer Letter
               </button>
 
-              <button className='flex justify-center items-center bg-primaryGray border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
+              <button className='flex justify-center items-center bg-[#F5EFEB] border text-primaryBlue hover:text-white border-black/[0.1] rounded-xl text-sm p-2 hover:bg-primaryBlue font-robotoLight hover:scale-110 transition-all duration-500 ease-in-out'>
                 Admission Result
               </button>
             </div>

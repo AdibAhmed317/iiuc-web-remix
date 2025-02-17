@@ -9,22 +9,25 @@ export default function WelcomeIiuc() {
   const truncateMessage = (text: string, limit: number) =>
     text.length > limit ? `${text.slice(0, limit)}...` : text;
 
-    useEffect(() => {
-        // YouTube Video Auto-play when component mounts
-        const iframe = document.querySelector('iframe');
-        if (iframe && iframe.contentWindow) {
-            iframe.contentWindow.postMessage(
-                '{"event":"command","func":"playVideo","args":""}', '*'
-            );
-        }
-    }, []);
+  useEffect(() => {
+    // YouTube Video Auto-play when component mounts
+    const iframe = document.querySelector('iframe');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage(
+        '{"event":"command","func":"playVideo","args":""}',
+        '*'
+      );
+    }
+  }, []);
 
   return (
-    <div className='bg-gray-100'>
+    <div className='mt-10'>
       <section className='py-8'>
         <div className='container mx-auto px-4'>
           <div className='bg-white rounded-lg shadow-md p-6'>
-            <h2 className='text-xl text-gray-600 mb-4'>Welcome To IIUC</h2>
+            <h2 className='text-4xl text-gray-600 mb-4 text-center font-robotoLight'>
+              Welcome To IIUC
+            </h2>
 
             <hr className='h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6' />
 
