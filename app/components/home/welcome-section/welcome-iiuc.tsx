@@ -29,14 +29,12 @@ export default function WelcomeIiuc() {
             <hr className='h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6' />
 
             <div className='space-y-4'>
-              <div className='flex flex-col md:flex-row gap-6'>
+              <div className='flex flex-col lg:flex-row gap-6'>
                 <iframe
-                  className='flex-1'
-                  width='560'
+                  className='flex-1' 
                   height='auto'
                   src='https://www.youtube.com/embed/QHDfe7rdtJg?si=IAz2y79avP1rDXTw&autoplay=1&mute=1&rel=0'
-                  title='YouTube video player'
-                  frameBorder='0'
+                  title='YouTube video player' 
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                   referrerPolicy='strict-origin-when-cross-origin'
                   allowFullScreen
