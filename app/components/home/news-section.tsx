@@ -58,7 +58,7 @@ export default function NewsSection() {
   return (
     <div className='max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative'>
       <div className='flex flex-col justify-center items-center'>
-        <h1 className='font-robotoRegular text-2xl md:text-4xl text-primaryBlue text-center'>
+        <h1 className='font-robotoLight text-4xl text-gray-600 text-center'>
           Latest News
         </h1>
         <span className='bg-primaryBlue w-10 h-[3px] my-5'></span>
@@ -77,7 +77,7 @@ export default function NewsSection() {
         viewport={{ once: true }}
       >
         {/* First slightly smaller big article */}
-        <div className='sm:col-span-5 lg:col-span-5'>
+        <div className='sm:col-span-5 lg:col-span-5 border-[#C8D9E6] border-[0.5px] rounded-lg overflow-hidden p-5'>
           {articles.slice(0, 1).map((item, index) => (
             <motion.div
               key={index}
@@ -111,11 +111,11 @@ export default function NewsSection() {
         </div>
 
         {/* Other smaller articles in 3 columns */}
-        <div className='sm:col-span-8 lg:col-span-6 grid grid-cols-3 gap-5'>
+        <div className='sm:col-span-8 lg:col-span-6 grid grid-cols-3 gap-5 '>
           {articles.slice(1).map((item, index) => (
             <motion.div
               key={index}
-              className='relative'
+              className='relative border-[#C8D9E6] border-[0.5px] rounded-lg p-2 overflow-hidden'
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: (index + 1) * 0.2 }}
@@ -123,7 +123,7 @@ export default function NewsSection() {
             >
               <a href='#'>
                 <div
-                  className='h-40 bg-cover text-center overflow-hidden'
+                  className='h-40 bg-cover text-center'
                   style={{
                     backgroundImage: `url(${item.imageUrl})`,
                     backgroundSize: 'cover',

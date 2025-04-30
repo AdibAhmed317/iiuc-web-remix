@@ -12,7 +12,7 @@ export const VipCard: React.FC<VipCardProps> = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className='h-96 w-full sm:w-80 flex flex-col justify-center items-center shadow-2xl hover:shadow-xl transition-all rounded-md bg-white p-4'>
+    <div className='w-full sm:w-80 flex flex-col justify-center items-center shadow-2xl hover:shadow-xl transition-all rounded-md bg-white p-4'>
       <img
         src={imgSrc}
         alt={`${name}'s photo`}

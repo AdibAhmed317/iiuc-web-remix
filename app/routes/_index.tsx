@@ -31,23 +31,17 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className='overflow-hidden bg-gray-100'>
+    <div className='min-h-screen flex flex-col bg-[#F5EFEB] overflow-hidden'>
       <Navbar />
       <HeroSection />
-      <Divider />
-      <Notice />
-      <Divider />
       <WelcomeIiuc />
-      <Divider />
+      <Notice />
       <Message />
-      <Divider />
       <NumberSection />
-      <Divider />
       <NewsSection />
-      <Divider />
       <QuickOptions />
-      <Divider />
       <LibrarySection />
+      <Divider />
       <Footer />
     </div>
   );
