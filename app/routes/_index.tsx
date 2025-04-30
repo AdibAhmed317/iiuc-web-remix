@@ -10,6 +10,8 @@ import WelcomeIiuc from '~/components/home/welcome-section/welcome-iiuc';
 import NewsSection from '~/components/home/news-section';
 import QuickOptions from '~/components/home/quick-options';
 import Divider from '~/components/divider';
+import ResearchSection from '~/components/home/research/research';
+import AcademicsSection from '~/components/home/academics/academics';
 
 export const meta: MetaFunction = () => {
   return [
@@ -39,6 +41,8 @@ export default function Index() {
       <Message />
       <NumberSection />
       <NewsSection />
+      <ResearchSection/>
+      <AcademicsSection/>
       <QuickOptions />
       <LibrarySection />
       <Divider />

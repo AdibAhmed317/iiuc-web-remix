@@ -59,7 +59,7 @@ export default function NewsSection() {
     <div className='max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16 relative'>
       <div className='flex flex-col justify-center items-center'>
         <h1 className='font-robotoLight text-4xl text-gray-600 text-center'>
-          Latest News
+          Latest News & Events
         </h1>
         <span className='bg-primaryBlue w-10 h-[3px] my-5'></span>
       </div>
