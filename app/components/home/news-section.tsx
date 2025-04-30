@@ -77,7 +77,7 @@ export default function NewsSection() {
         viewport={{ once: true }}
       >
         {/* First slightly smaller big article */}
-        <div className='sm:col-span-5 lg:col-span-5 border-[#C8D9E6] border-[0.5px] rounded-lg overflow-hidden p-5'>
+        <div className='sm:col-span-5 lg:col-span-5 border-[#C8D9E6] border-[0.5px] rounded-lg overflow-hidden p-5 bg-white'>
           {articles.slice(0, 1).map((item, index) => (
             <motion.div
               key={index}
@@ -115,7 +115,7 @@ export default function NewsSection() {
           {articles.slice(1).map((item, index) => (
             <motion.div
               key={index}
-              className='relative border-[#C8D9E6] border-[0.5px] rounded-lg p-2 overflow-hidden'
+              className='relative border-[#C8D9E6] border-[0.5px] rounded-lg p-2 overflow-hidden bg-white'
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: (index + 1) * 0.2 }}
@@ -135,7 +135,7 @@ export default function NewsSection() {
               </a>
               <a
                 href='#'
-                className='text-gray-900 inline-block font-semibold text-md my-2 hover:text-indigo-600 transition duration-500 ease-in-out'
+                className='text-gray-900 inline-block font-semibold text-sm my-2 hover:text-indigo-600 transition duration-500 ease-in-out'
               >
                 {item.title}
               </a>
