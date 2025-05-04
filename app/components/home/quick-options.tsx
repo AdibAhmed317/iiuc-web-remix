@@ -28,7 +28,7 @@ const itemVariants = {
 
 export default function QuickOptions() {
   return (
-    <div className='mb-20 mt-16'>
+    <div className='pb-20 pt-16 bg-gray-50'>
       <div className='flex flex-col justify-center items-center'>
         <h1 className='font-robotoLight text-4xl text-gray-600 text-center'>
           Quick Links

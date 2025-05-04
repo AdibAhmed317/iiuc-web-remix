@@ -66,7 +66,7 @@ export default function NumberSection() {
       // initial={{ opacity: 0 }}
       // animate={{ opacity: isInView ? 1 : 0 }} // Fade in when in view
       transition={{ duration: 1 }}
-      className='bg-black/85 mt-10 flex justify-center items-center'
+      className='bg-black/85 pt-10 flex justify-center items-center'
       style={{
         backgroundImage: `url(${counterBg})`,
         backgroundSize: 'cover',

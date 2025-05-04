@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 
 export default function Message() {
   return (
-    <div className='h-full w-full flex flex-col justify-center items-center space-y-10 p-4'>
+    <div className='h-full w-full flex flex-col justify-center items-center space-y-10 p-4 my-10'>
       <div className='flex flex-col justify-center items-center'>
         <h1 className='font-robotoLight text-4xl text-gray-600 text-center'>
           Messages
@@ -22,10 +22,10 @@ export default function Message() {
       </div>
       <div className='flex flex-col md:flex-row md:space-x-5 space-y-4 md:space-y-0 items-center'>
         <motion.div
-          initial={{ x: -200, opacity: 0 }} // Start from the left off-screen
-          whileInView={{ x: 0, opacity: 1 }} // Animate to normal position when in view
+          initial={{ x: -200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }} // Trigger animation only once when entering the viewport
+          viewport={{ once: true }}
         >
           <VipCard
             name='A.N.M Shamsul Islam'
@@ -36,10 +36,10 @@ export default function Message() {
           />
         </motion.div>
         <motion.div
-          initial={{ x: 200, opacity: 0 }} // Start from the right off-screen
-          whileInView={{ x: 0, opacity: 1 }} // Animate to normal position when in view
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }} // Trigger animation only once when entering the viewport
+          viewport={{ once: true }}
         >
           <MessageCard />
         </motion.div>
@@ -47,10 +47,10 @@ export default function Message() {
       <div className='flex flex-wrap justify-center md:justify-start gap-4'>
         <motion.div
           className='flex-1'
-          initial={{ y: 100, opacity: 0 }} // Start from below the screen
-          whileInView={{ y: 0, opacity: 1 }} // Animate to normal position when in view
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ once: true }} // Trigger animation only once when entering the viewport
+          viewport={{ once: true }}
         >
           <VipCard
             name='Prof. Dr. Mohammad Ali Azadi'
@@ -62,10 +62,10 @@ export default function Message() {
         </motion.div>
         <motion.div
           className='flex-1'
-          initial={{ y: 100, opacity: 0 }} // Start from below the screen
-          whileInView={{ y: 0, opacity: 1 }} // Animate to normal position when in view
-          transition={{ duration: 1, delay: 0.3 }} // Add a slight delay for Pro VC
-          viewport={{ once: true }} // Trigger animation only once when entering the viewport
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
         >
           <VipCard
             name='Demo Pro VC Name'
@@ -77,10 +77,10 @@ export default function Message() {
         </motion.div>
         <motion.div
           className='flex-1'
-          initial={{ y: 100, opacity: 0 }} // Start from below the screen
-          whileInView={{ y: 0, opacity: 1 }} // Animate to normal position when in view
-          transition={{ duration: 1, delay: 0.6 }} // Add a further delay for Treasurer (in-charge)
-          viewport={{ once: true }} // Trigger animation only once when entering the viewport
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          viewport={{ once: true }}
         >
           <VipCard
             name='Prof. Dr. Muhammad Mahbubur Rahman'
