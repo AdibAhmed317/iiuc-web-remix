@@ -11,7 +11,7 @@ export default function ResearchSection() {
         link: "/research/faculty"
       },
       {
-        title: "Research Highlights",
+        title: "Research Highlights By IIUC",
         subtitle: "Explore different journal papers, conference papers, and other research works by IIUC faculties",
         image: hl,
         link: "/research/highlights"
