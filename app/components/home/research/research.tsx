@@ -26,7 +26,7 @@ export default function ResearchSection() {
       },
       {
         title: "Research Areas",
-        subtitle: "Research areas are focused to lead the fourth industrial revolution and address the challenges of the 21st century",
+        subtitle: "Research areas are focused to lead the 4th industrial revolution and address the challenges of the 21st century",
         image: ra,
         link: "/research/areas"
       },
