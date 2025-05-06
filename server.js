@@ -2,7 +2,6 @@ import express from 'express';
 import { createRequestHandler } from '@remix-run/express';
 import { readFileSync } from 'fs';
 import https from 'https';
-import path from 'path';
 
 // SSL Certificate files
 const sslOptions = {
@@ -22,6 +21,7 @@ const sslOptions = {
 const app = express();
 
 app.use(express.static('public'));
+
 app.all(
   '*',
   createRequestHandler({
