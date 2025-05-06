@@ -3,7 +3,7 @@ import { createRequestHandler } from '@remix-run/express';
 import { readFileSync } from 'fs';
 import https from 'https';
 import http from 'http'; // Import the HTTP module
-import * as build from './build/sserver/index.js'; // ← required Remix build output
+import * as build from './build/server/index.js'; // ← required Remix build output
 
 // SSL certificate paths
 const sslOptions = {
