@@ -1,0 +1,68 @@
+name: Deploy Remix App to Debian
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Remix app
+        run: |
+          npm run build
+          # Copy required server files
+          cp server.js build/
+          cp -R public build/  # If you have direct public assets
+
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
+      - name: Deploy to Debian server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          DEPLOY_DIR: ${{ secrets.DEPLOY_DIR }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          # Rsync with strict SSH options for Debian
+          rsync -avz --delete -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+            build/ root@${{ secrets.SERVER_IP }}:$DEPLOY_DIR/
+
+          rsync -avz -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+            package.json package-lock.json root@${{ secrets.SERVER_IP }}:$DEPLOY_DIR/
+
+      - name: Restart application via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            export NODE_ENV=production
+            cd ${{ secrets.DEPLOY_DIR }}
+
+            echo "Installing production dependencies..."
+            npm ci --omit=dev
+
+            echo "Restarting PM2 process..."
+            pm2 delete ${{ secrets.PM2_APP_NAME }} || true
+            pm2 start server.js --name ${{ secrets.PM2_APP_NAME }} --time
+            pm2 save
+
+            echo "Current PM2 status:"
+            pm2 list
