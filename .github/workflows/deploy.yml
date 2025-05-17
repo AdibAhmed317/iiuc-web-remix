@@ -16,8 +16,36 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: 6251
           script: |
-            cd /var/www/iiuc-web-remix
+            # 1. Navigate to project directory
+            cd /var/www/iiuc-web-remix || { echo "Directory not found"; exit 1; }
+
+            # 2. Get latest code
+            echo "Pulling latest code..."
+            git reset --hard HEAD
+            git clean -fd
             git pull origin main
+
+            # 3. Clean previous build
+            echo "Cleaning previous build..."
+            rm -rf .cache
+            rm -rf build
+
+            # 4. Install dependencies and build
+            echo "Installing dependencies..."
             npm install --omit=dev
-            pm2 restart ${{ secrets.PM2_APP_NAME }} || pm2 start server.js --name ${{ secrets.PM2_APP_NAME }}
+            echo "Building application..."
+            npm run build
+
+            # 5. PM2 management
+            echo "Checking PM2 status..."
+            if pm2 list | grep -q ${{ secrets.PM2_APP_NAME }}; then
+              echo "Restarting existing PM2 process..."
+              pm2 restart ${{ secrets.PM2_APP_NAME }} --update-env
+            else
+              echo "Starting new PM2 process..."
+              pm2 start server.js --name ${{ secrets.PM2_APP_NAME }}
+            fi
+
+            # 6. Save PM2 state
             pm2 save
+            echo "Deployment complete!"
