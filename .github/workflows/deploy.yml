@@ -17,35 +17,36 @@ jobs:
           port: 6251
           script: |
             # 1. Navigate to project directory
-            cd /var/www/iiuc-web-remix || { echo "Directory not found"; exit 1; }
+            cd /var/www/iiuc-web-remix || exit 1
 
             # 2. Get latest code
-            echo "Pulling latest code..."
+            echo "➡️ Pulling latest code..."
             git reset --hard HEAD
             git clean -fd
             git pull origin main
 
-            # 3. Clean previous build
-            echo "Cleaning previous build..."
-            rm -rf .cache
-            rm -rf build
-
-            # 4. Install dependencies and build
-            echo "Installing dependencies..."
+            # 3. Install dependencies
+            echo "➡️ Installing dependencies..."
             npm install --omit=dev
-            echo "Building application..."
+
+            # 4. Build application
+            echo "➡️ Building application..."
             npm run build
 
-            # 5. PM2 management
-            echo "Checking PM2 status..."
-            if pm2 list | grep -q ${{ secrets.PM2_APP_NAME }}; then
-              echo "Restarting existing PM2 process..."
-              pm2 restart ${{ secrets.PM2_APP_NAME }} --update-env
-            else
-              echo "Starting new PM2 process..."
-              pm2 start server.js --name ${{ secrets.PM2_APP_NAME }}
-            fi
+            # 5. Verify build output
+            echo "➡️ Build contents:"
+            ls -l build/
+            ls -l build/server/
 
-            # 6. Save PM2 state
+            # 6. Stop and delete existing PM2 process
+            echo "➡️ Stopping existing PM2 process..."
+            pm2 delete iiuc-web-remix || true
+
+            # 7. Start fresh PM2 process
+            echo "➡️ Starting new PM2 process..."
+            pm2 start npm --name "iiuc-web-remix" -- start
+
+            # 8. Save and final checks
             pm2 save
-            echo "Deployment complete!"
+            echo "✅ Deployment complete!"
+            pm2 list
