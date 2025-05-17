@@ -9,42 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build Remix app
-        run: |
-          npm run build
-          cp server.js build/
-
-      - name: Configure SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          echo "Host deploy-host
-            HostName ${{ secrets.SERVER_IP }}
-            User root
-            Port 6251
-            IdentityFile ~/.ssh/deploy_key
-            StrictHostKeyChecking no" >> ~/.ssh/config
-
-      - name: Deploy files via rsync
-        run: |
-          rsync -avz --delete -e "ssh -F ~/.ssh/config" \
-            build/ deploy-host:${{ secrets.DEPLOY_DIR }}/
-          rsync -avz -e "ssh -F ~/.ssh/config" \
-            package.json package-lock.json deploy-host:${{ secrets.DEPLOY_DIR }}/
-
-      - name: Restart application
+      - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SERVER_IP }}
@@ -52,8 +17,8 @@ jobs:
           port: 6251
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ${{ secrets.DEPLOY_DIR }}
-            npm ci --omit=dev
-            pm2 delete ${{ secrets.PM2_APP_NAME }} || true
-            pm2 start server.js --name ${{ secrets.PM2_APP_NAME }}
+            cd /var/www/iiuc-web-remix
+            git pull origin main
+            npm install --omit=dev
+            pm2 restart ${{ secrets.PM2_APP_NAME }} || pm2 start server.js --name ${{ secrets.PM2_APP_NAME }}
             pm2 save
