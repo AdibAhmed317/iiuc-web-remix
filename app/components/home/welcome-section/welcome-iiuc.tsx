@@ -25,7 +25,7 @@ export default function WelcomeIiuc() {
         <div className='container mx-auto px-2 sm:px-4'>
           <div className='bg-white rounded-lg shadow-md p-3 sm:p-6'>
             <h2 className='text-lg xs:text-xl sm:text-2xl md:text-4xl text-gray-600 mb-3 sm:mb-4 text-center font-robotoLight'>
-              not so Welcome To IIUC
+              Welcome To IIUC
             </h2>
 
             <hr className='h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-4 sm:mb-6' />
