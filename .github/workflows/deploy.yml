@@ -32,21 +32,3 @@ jobs:
             # 4. Build application
             echo "➡️ Building application..."
             npm run build
-
-            # 5. Verify build output
-            echo "➡️ Build contents:"
-            ls -l build/
-            ls -l build/server/
-
-            # 6. Stop and delete existing PM2 process
-            echo "➡️ Stopping existing PM2 process..."
-            pm2 delete iiuc-web-remix || true
-
-            # 7. Start fresh PM2 process
-            echo "➡️ Starting new PM2 process..."
-            pm2 start npm --name "iiuc-web-remix" -- start
-
-            # 8. Save and final checks
-            pm2 save
-            echo "✅ Deployment complete!"
-            pm2 list
