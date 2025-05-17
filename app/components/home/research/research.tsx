@@ -6,7 +6,7 @@ export default function ResearchSection() {
     const researchItems = [
       {
         title: "Faculty Profiles",
-        subtitle: "Explore Research faculties across different departents",
+        subtitle: "Explore Research faculties across various departents",
         image: c2,
         link: "/research/faculty"
       },
